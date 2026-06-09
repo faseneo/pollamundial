@@ -39,8 +39,6 @@
    - **Project URL**: algo como `https://abcdefgh.supabase.co`
    - **anon public key**: una clave larga que empieza con `eyJ...`
 
-VITE_SUPABASE_URL=https://bogdzfxngqxglwbmknpp.supabase.co
-VITE_SUPABASE_PUBLISHABLE_KEY=sb_publishable_zpIEYYN9X14VcH9LuympjQ_VbfWdgBp
 ---
 
 ## 4. CONFIGURAR LA APP REACT
