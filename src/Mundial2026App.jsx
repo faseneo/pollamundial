@@ -308,7 +308,18 @@ function AuthScreen({ onLogin }) {
           <p>Pronósticos USA • México • Canadá</p>
         </div>
         {error && <div className="error-msg">{error}</div>}
-        {success && <div className="success-msg">{success}</div>}
+        {success && (
+          <div>
+            <div className="success-msg">{success}</div>
+            <button
+              className="btn-full btn-primary"
+              style={{ marginTop: "0.5rem" }}
+              onClick={() => { setMode("login"); setSuccess(""); setEmail(""); setPassword(""); }}
+            >
+              Ir a Iniciar Sesión →
+            </button>
+          </div>
+        )}
         {!success && (
           <form onSubmit={mode === "login" ? handleLogin : handleRegister}>
             {mode === "register" && (
@@ -338,9 +349,9 @@ function AuthScreen({ onLogin }) {
         )}
         <div className="auth-switch">
           {mode === "login" ? (
-            <>¿Sin cuenta? <button className="link-btn" onClick={() => { setMode("register"); setError(""); }}>Regístrate aquí</button></>
+            <>¿Sin cuenta? <button className="link-btn" onClick={() => { setMode("register"); setError(""); setSuccess(""); }}>Regístrate aquí</button></>
           ) : (
-            <>¿Ya tienes cuenta? <button className="link-btn" onClick={() => { setMode("login"); setError(""); }}>Inicia sesión</button></>
+            <>¿Ya tienes cuenta? <button className="link-btn" onClick={() => { setMode("login"); setError(""); setSuccess(""); }}>Inicia sesión</button></>
           )}
         </div>
       </div>
