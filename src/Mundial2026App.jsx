@@ -486,7 +486,7 @@ function PartidoCard({ partido, pronostico, onPronostico, mostrarResultado = fal
         ))}
         {pronostico && partido.resultado_registrado && (
           <span className={`badge-res ${pronostico === partido.resultado ? "badge-ok" : "badge-fail"}`}>
-            {pronostico === partido.resultado ? "✓ Acertaste" : "✗ Fallaste"}
+            {pronostico === partido.resultado ? "✓ Acertaste" : "✗ No acertaste"}
           </span>
         )}
       </div>
